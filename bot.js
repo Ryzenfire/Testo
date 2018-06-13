@@ -33,7 +33,10 @@ client.on("guildDelete", guild => {
 
 client.on("message", async message => {
   // This event will run on every single message received, from any channel or DM.
-  
+  if(message.guild.id !== "445093543296368661")return
+
+if(message.content === "test")
+
   // It's good practice to ignore other bots. This also makes your bot ignore itself
   // and not get into a spam loop (we call that "botception").
   if(message.author.bot) return;
